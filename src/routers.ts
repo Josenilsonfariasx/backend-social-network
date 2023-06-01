@@ -9,7 +9,7 @@ import { ListUserController } from "./controllers/user/ListUserController";
 //post urls
 
 import { CreatePostController } from "./controllers/posts/CreatePostController";
-
+import { ListPostController } from "./controllers/posts/ListPostController";
 const route = Router()
 
 //route users ---------------
@@ -21,5 +21,6 @@ route.get('/usersall', isAuthenticated, new ListUserController().handle)
 //Post -----------
 
 route.post('/post', isAuthenticated, new CreatePostController().handle)
+route.get('/postlist', isAuthenticated, new ListPostController().handle)
 
 export {route}
