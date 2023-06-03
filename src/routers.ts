@@ -17,9 +17,14 @@ import { ListByUserController } from "./controllers/posts/ListByUserController";
 const route = Router()
 
 
+//like -------------------------
+import { CreateLikeController } from "./controllers/like/CreateLikeController";
+import { DeleteLikeController } from "./controllers/like/DeleteLikeController";
+import { LikeByPostController } from "./controllers/like/LikeByPostController";
 
 
-//router users ---------------
+
+//router Users ------------
 route.post('/users', new CreateUserController().handle)
 route.post('/session', new AuthUserController().handle)
 route.get('/userinfor', isAuthenticated, new DetailUserController().handle)
@@ -27,10 +32,21 @@ route.get('/usersall', isAuthenticated, new ListUserController().handle)
 
 
 
-//Post -----------
+// router Post ------------
 route.post('/post', isAuthenticated, new CreatePostController().handle)
 route.get('/postlist', isAuthenticated, new ListPostController().handle)
 route.get('/post/delete', isAuthenticated, new DeletePostController().handle)
 route.get('/post/user', isAuthenticated, new ListByUserController().handle)
+
+
+//router Like -------------
+route.post('/like', isAuthenticated, new CreateLikeController().handle)
+route.get('/like/delete', isAuthenticated, new DeleteLikeController().handle)
+route.get('/like/cont', isAuthenticated, new LikeByPostController().handle)
+
+
+
+
+
 
 export {route}

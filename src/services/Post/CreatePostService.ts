@@ -17,6 +17,7 @@ class CreatePostService{
                 titulo:titulo,
                 conteudo:conteudo,
                 usuario: { connect: { id: usuarioId } },
+                
             }
 
         })
