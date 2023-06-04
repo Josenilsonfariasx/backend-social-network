@@ -6,7 +6,9 @@
   "author": "Josenilsonfarias <fariaslwok@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "build": "rm -rf ./dist && tsc",
+		"start": "node ./dist/index.js"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
