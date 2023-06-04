@@ -5,7 +5,7 @@ class DeletePostController{
     async handle(req:Request, res:Response){
         const postId = req.query.postId as string
         const deletePostController = new DeletePostService()
-        const posts = await deletePostController.execute({id_user:postId})
+        const posts = await deletePostController.execute({postId:postId})
 
         return res.json(posts)
     }

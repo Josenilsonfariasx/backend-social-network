@@ -1,14 +1,23 @@
 import prismaClient from "../../prisma";
-import { ListUserController } from "../../controllers/user/ListUserController";
-class DeletePostService{
-    async execute({id_user}){
-        const deletePost = await prismaClient.postagem.delete({
-            where:{
-                id: id_user
-            }
-        })
-        return (deletePost)
+
+class DeletePostService {
+async execute({ postId }) {
+    // Excluir as curtidas relacionadas à postagem
+    await prismaClient.curtida.deleteMany({
+        where: {
+            postagemId: postId,
+        },
+    });
+
+    // Excluir a postagem
+    const deletePost = await prismaClient.postagem.delete({
+        where: {
+            id: postId,
+        },
+    });
+
+    return deletePost;
     }
 }
 
-export { DeletePostService }
+export { DeletePostService };
