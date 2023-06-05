@@ -9,40 +9,43 @@ interface UserRequest {
 }
 
 class CreateUserService {
-    async execute({nome, email, senha, fotoPerfil,}: UserRequest) {
-        
-        if(!email){
-            throw new Error ('Email incorrect')
+    async execute({ nome, email, senha, fotoPerfil }: UserRequest) {
+        try {
+        if (!email) {
+            throw new Error("Email is required");
         }
 
         const userAlreadyExist = await prismaClient.usuario.findFirst({
-            where:{
-                email: email,
-            }
-        })
+            where: {
+            email: email,
+            },
+        });
 
-        if(userAlreadyExist){
-            throw new Error('Email already exists')
+        if (userAlreadyExist) {
+            throw new Error("Email already exists");
         }
 
-        const passwordHash = await hash(senha,8)
+        const passwordHash = await hash(senha, 8);
 
         const user = await prismaClient.usuario.create({
             data: {
-            nome : nome,
+            nome: nome,
             email: email,
             senha: passwordHash,
             fotoPerfil: fotoPerfil,
             },
-            select:{
-                id:true,
-                nome: true,
-                email: true,
-                fotoPerfil: true, 
-            }
+            select: {
+            id: true,
+            nome: true,
+            email: true,
+            fotoPerfil: true,
+            },
         });
 
         return user;
+        } catch (error) {
+        throw new Error("Failed to create user: " + error.message);
+        }
     }
 }
 

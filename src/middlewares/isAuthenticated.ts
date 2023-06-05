@@ -6,7 +6,6 @@ interface Payload{
 }
 export function isAuthenticated(req:Request, res:Response, next:NextFunction){
     const authToken = req.headers.authorization
-
     if(!authToken){
         return res.status(401).end()
     }

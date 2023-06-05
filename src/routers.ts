@@ -6,6 +6,7 @@ import { AuthUserController } from "./controllers/user/AuthUserController";
 import { DetailUserController } from "./controllers/user/DetailUserController"
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 import { ListUserController } from "./controllers/user/ListUserController";
+import { UpadteUserController } from "./controllers/user/UpdateUserController";
 
 
 
@@ -36,6 +37,7 @@ route.post('/user', new CreateUserController().handle)
 route.post('/user/session', new AuthUserController().handle)
 route.get('/user/info', isAuthenticated, new DetailUserController().handle)
 route.get('/user/list', isAuthenticated, new ListUserController().handle)
+route.put('/user/id', isAuthenticated, new UpadteUserController().handle)
 
 
 
