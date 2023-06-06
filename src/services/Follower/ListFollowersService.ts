@@ -16,7 +16,7 @@ class ListFollowersService{
         const objFollower = {
             id_user: [],
             name_seguidor : [],
-            numero_seguidores: null
+            numero_seguidores: null,
         }
         
         
@@ -32,6 +32,7 @@ class ListFollowersService{
             objFollower.id_user.push(follower.id)
             objFollower.name_seguidor.push(name_seguidor.nome)
             objFollower.numero_seguidores = followers.length
+            
         }
         return (objFollower)
     }

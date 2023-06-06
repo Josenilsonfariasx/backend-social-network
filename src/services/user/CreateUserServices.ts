@@ -14,6 +14,9 @@ class CreateUserService {
         if (!email) {
             throw new Error("Email is required");
         }
+        if(fotoPerfil=''){
+            fotoPerfil = '/src/assets/img/user1.svg'
+        }
 
         const userAlreadyExist = await prismaClient.usuario.findFirst({
             where: {
