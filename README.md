@@ -15,7 +15,7 @@ Este projeto é uma API backend para uma rede social simple. Implementa um CRUD 
 * <b>Rotas seguras com JWT</b>: Todas as rotas sao seguras impedindo que qualquer pessoa possa acessar qualquer rota
 
 ## :wrench: Tecnologias utilizadas
-<img src="[BadgeURLAqui](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)" />
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
 <img src="BadgeURLAqui" />
 <img src="BadgeURLAqui" />
 <img src="BadgeURLAqui" />
