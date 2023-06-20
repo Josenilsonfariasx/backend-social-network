@@ -28,21 +28,39 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 yarn
 ```
 
-## :soon: Implementação futura
-* O que será implementado na próxima sprint?
+Crie um Banco de dados Postgree e use os dados do BDD para configurar o Prisma ORM
+Crie um arquivo .env na raiz do projeto e crie duas varaveis de ambiente:
+*DATABASE_URL=""
+*JWT_SECRET=a64464757087f1611c6c8da04a930372
 
-## :handshake: Colaboradores
+Dentro do DATABASE_URL coloque o link do seu BDD
+
+Para fazer execultar as migrações no bdd utilize o seguinte comando:
+```
+npx prisma dev
+```
+
+Para finalizar so execultar o comando a baixo e acessar o localhost na porta 3333 pelo insonmia e seguir as urls no arquivo routes.ts:
+```
+yarn dev
+```
+
+## :soon: Implementação futura
+* Usuarios poderão privar seus perfil
+* Usuarios poderão bloquear qualquer perfil
+
+## :Autor
 <table>
   <tr>
     <td align="center">
-      <a href="http://github.com/tatialveso">
+      <a href="http://github.com/Josenilsonfariasx">
         <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
         <sub>
-          <b>tatialveso</b>
+          <b>Josenilson Farias</b>
         </sub>
       </a>
     </td>
   </tr>
 </table>
 
-## :dart: Status do projeto
+## :dart: Social Network
