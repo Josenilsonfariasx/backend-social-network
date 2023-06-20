@@ -58,7 +58,7 @@ yarn dev
   <tr>
     <td align="center">
       <a href="http://github.com/Josenilsonfariasx">
-        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <img src="[https://avatars.githubusercontent.com/u/56259137?v=4](https://cdn.discordapp.com/attachments/1088452145508003920/1120789571328802856/download20230602155721.png)" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
         <sub>
           <b>Josenilson Farias</b>
         </sub>
