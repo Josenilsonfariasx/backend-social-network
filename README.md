@@ -4,6 +4,9 @@
 Social Network:
 Este projeto é uma API backend para uma rede social simple. Implementa um CRUD completo (Create, Read, Update, Delete) usando as tecnologias JWT (JSON Web Tokens), Prisma ORM e Express, Postgree Sql, TypeScript...
 
+## ⛹️‍♀️ Finalizando este Projeto Full Stack em andamento segue o link ⬇️
+* https://entrega-criando-rede-social-josenilsonfariasx-1roctl7zc.vercel.app/
+
 ## :books: Funcionalidades
 * <b>Criar Perfil</b>: O usuario pode cadastrar um perfil utilizando Email, nomde de usuario e senha
 * <b>Login </b>: O usuario pode efetuar um login utilizando Email e senha
