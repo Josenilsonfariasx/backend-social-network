@@ -23,9 +23,9 @@ Este projeto é uma API backend para uma rede social simple. Implementa um CRUD 
 <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white"/>
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
+Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para instalar as dependencias:
 ```
-<linha de comando>
+yarn
 ```
 
 ## :soon: Implementação futura
