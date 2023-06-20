@@ -31,8 +31,8 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 yarn
 ```
 
-Crie um Banco de dados Postgree e use os dados do BDD para configurar o Prisma ORM
-Crie um arquivo .env na raiz do projeto e crie duas varaveis de ambiente:
+Crie um Banco de dados Postgree e use os dados do BDD para configurar o Prisma ORM <br>
+Crie um arquivo .env na raiz do projeto e crie duas varaveis de ambiente:<br>
 *DATABASE_URL=""
 *JWT_SECRET=a64464757087f1611c6c8da04a930372
 
