@@ -7,7 +7,7 @@ import { DetailUserController } from "./controllers/user/DetailUserController"
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 import { ListUserController } from "./controllers/user/ListUserController";
 import { UpadteUserController } from "./controllers/user/UpdateUserController";
-
+import { UserByUuidController } from "./controllers/user/UserByUuid";
 
 
 //post  -----------------------
@@ -38,6 +38,8 @@ route.post('/user/session', new AuthUserController().handle)
 route.get('/user/info', isAuthenticated, new DetailUserController().handle)
 route.get('/user/list', isAuthenticated, new ListUserController().handle)
 route.put('/user/id', isAuthenticated, new UpadteUserController().handle)
+route.get('/user/detail/', isAuthenticated, new UserByUuidController().handle)
+
 
 
 
@@ -60,4 +62,4 @@ route.get('/follower/list', isAuthenticated, new ListFollowersController().handl
 route.get('/follower/delete', isAuthenticated, new DeleteFollowerController().handle)
 
 
-export {route}
+export { route }

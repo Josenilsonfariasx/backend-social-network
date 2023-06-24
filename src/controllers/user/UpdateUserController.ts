@@ -8,7 +8,7 @@ class UpadteUserController {
 
         console.log(user_id, fotoPerfil)
 
-        const updateUserService = new UpdateUserService();
+        const updateUserService = new UpdateUserService()
 
         try {
         const updatedUser = await updateUserService.execute({
