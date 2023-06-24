@@ -12,6 +12,11 @@ class ListPostService {
                 fotoPerfil: true,
             },
             },
+            curtidasPost:{
+                select:{
+                    usuarioId:true
+                }
+            }
         },
         });
 
