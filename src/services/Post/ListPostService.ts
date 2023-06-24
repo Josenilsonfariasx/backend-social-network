@@ -19,8 +19,14 @@ class ListPostService {
             }
         },
         });
+        const postCompleted = posts.map((post) => {
+            return {
+                ...post,
+                likesCount: post.curtidasPost.length,
+            };
+        });
 
-        return posts;
+        return postCompleted;
     } catch (error) {
         throw new Error("Failed to fetch posts: " + error.message);
     }
