@@ -33,16 +33,16 @@ class CreateUserService {
 
         const user = await prismaClient.usuario.create({
             data: {
-            nome: nome,
-            email: email,
-            senha: passwordHash,
-            fotoPerfil: fotoPerfil,
+                nome: nome,
+                email: email,
+                senha: passwordHash,
+                fotoPerfil: fotoPerfil,
             },
             select: {
-            id: true,
-            nome: true,
-            email: true,
-            fotoPerfil: true,
+                id: true,
+                nome: true,
+                email: true,
+                fotoPerfil: true,
             },
         });
 

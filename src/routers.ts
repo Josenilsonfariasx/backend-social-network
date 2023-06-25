@@ -10,11 +10,15 @@ import { UpadteUserController } from "./controllers/user/UpdateUserController";
 import { UserByUuidController } from "./controllers/user/UserByUuid";
 
 
+
 //post  -----------------------
 import { CreatePostController } from "./controllers/posts/CreatePostController";
 import { ListPostController } from "./controllers/posts/ListPostController";
 import { DeletePostController } from "./controllers/posts/DeletePostController";
 import { ListByUserController } from "./controllers/posts/ListByUserController";
+import { PostByIdController } from "./controllers/posts/PostByIdController";
+
+
 const route = Router()
 
 
@@ -48,6 +52,7 @@ route.post('/post', isAuthenticated, new CreatePostController().handle)
 route.get('/post/list', isAuthenticated, new ListPostController().handle)
 route.get('/post/delete', isAuthenticated, new DeletePostController().handle)
 route.get('/post/user', isAuthenticated, new ListByUserController().handle)
+route.get('/post/detail', isAuthenticated, new PostByIdController().handle)
 
 
 //router Like -------------
